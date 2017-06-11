@@ -31,7 +31,7 @@
             <sf:password path="password" cssClass="form-control" placeholder="password"/>
           </div>
           <div class="form-group">
-            <input type="submit" class="form-control btn btn-primary">
+            <input type="submit" value="登录" class="form-control btn btn-primary">
           </div>
         </sf:form>
       </div>

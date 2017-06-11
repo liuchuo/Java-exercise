@@ -38,6 +38,7 @@ public class TaskRepository {
     return taskDTOS;
   }
 
+  // TaskRespository中的addTask方法
   public void addTask(String content, int userId) {
     String sql = "INSERT INTO task(user_id, content, checked) VALUE (:user_id, :content, FALSE)";
     Map<String, Object> map = new HashMap<>();
@@ -46,6 +47,7 @@ public class TaskRepository {
     namedParameterJdbcOperations.update(sql, map);
   }
 
+  // TaskRepository类中的changeState方法
   public void changeState(int taskId, boolean checked, int userId) {
     String sql = "UPDATE task SET checked = :state WHERE id = :task_id AND user_id = :user_id";
     Map<String, Object> map = new HashMap<>();
@@ -55,6 +57,7 @@ public class TaskRepository {
     namedParameterJdbcOperations.update(sql, map);
   }
 
+  // TaskRepository类中的dropTask方法
   public void dropTask(int taskId, int userId) {
     String sql = "DELETE FROM task WHERE id = :task_id AND user_id = :user_id";
     Map<String, Object> map = new HashMap<>();
@@ -63,6 +66,7 @@ public class TaskRepository {
     namedParameterJdbcOperations.update(sql, map);
   }
 
+  // TaskRepository类中的updateTask方法
   public void updateTask(int taskId, String content, int userId) {
     String sql = "UPDATE task SET content = :content WHERE id = :task_id AND user_id = :user_id";
     Map<String, Object> map = new HashMap<>();

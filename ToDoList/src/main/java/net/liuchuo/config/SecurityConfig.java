@@ -38,6 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
       .anyRequest().authenticated();
   }
 
+  //重写SecurityConfig类中的configure(AuthenticationManagerBuilder)方法
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     auth.userDetailsService(new UserDetailsServerImpl(userRepository));

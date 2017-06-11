@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+// UserDetailsServerImpl方法，实现了UserDetailsService
 public class UserDetailsServerImpl implements UserDetailsService {
 
   private final UserRepository userRepository;

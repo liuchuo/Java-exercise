@@ -29,6 +29,7 @@ public class HomeController {
     this.profileRepository = profileRepository;
   }
 
+  // HomeController类中的showView方法
   @RequestMapping(method = RequestMethod.GET)
   public String showView(Model model) {
     User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();

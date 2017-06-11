@@ -18,6 +18,7 @@ public class UserRepository {
     this.namedParameterJdbcOperations = namedParameterJdbcOperations;
   }
 
+  // UserRepository中的getUser方法
   public UserDTO getUser(String username) {
     String sql = "SELECT * FROM user WHERE username = :username";
     Map<String, String> map = new HashMap<>();

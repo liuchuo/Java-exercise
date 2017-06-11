@@ -40,7 +40,7 @@
             <input type="text" name="content" title="content" class="form-control" placeholder="添加任务...">
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-primary form-control">
+            <input type="submit" value="添加" class="btn btn-primary form-control">
           </div>
         </form>
       </div>
@@ -116,6 +116,7 @@
   </div>
 </div>
 <script src="<c:url value="/lib/jquery-3.2.1.min.js"/>"></script>
+
 <script type="text/javascript">
     function submit(checkbox) {
         if (checkbox.checked) {
@@ -124,11 +125,12 @@
             location.href = "to_do_task?" + checkbox.getAttribute("name") + "=" + checkbox.getAttribute("value");
         }
     }
-
+    // home.jsp中的drop方法
     function drop(url) {
         location.href = "drop_task?" + url;
     }
 
+    // home.jsp中edit方法
     function edit(span, taskId) {
         span.innerHTML = "<input id='edit' type='text' value='" + span.innerText + "' class='col-md-12' />";
         var $input = $("#edit");
